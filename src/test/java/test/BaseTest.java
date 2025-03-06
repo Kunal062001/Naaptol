@@ -9,8 +9,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import pojo.Browser;
-import pom.HomePage;
-import pom.ProductDetailsPage;
+
 
 public class BaseTest {
 	public static WebDriver driver;
@@ -28,6 +27,7 @@ public class BaseTest {
 	public void exitBrowser() {
 		driver.quit();
 	}
+	
 	
 	
 	

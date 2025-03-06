@@ -6,8 +6,8 @@
       <class name="test.CartTest">
         <methods>
           <include name="launchBrowser"/>
-          <include name="clickMultipleProductAddToCartAndVerifyInCart"/>
           <include name="exitBrowser"/>
+          <include name="clickMultipleProductAddToCartAndVerifyInCart"/>
         </methods>
       </class> <!-- test.CartTest -->
     </classes>

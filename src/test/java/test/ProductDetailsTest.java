@@ -1,5 +1,6 @@
 package test;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -45,7 +46,8 @@ public class ProductDetailsTest extends BaseTest {
 		driver.switchTo().window(i.next());
 		
 		ProductDetailsPage detailsPage=new ProductDetailsPage(driver);
-		detailsPage.clickOnclickToBuyBtn();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
+		detailsPage.clickOnclickToBuyBtn(driver);
 		
 		CartPage cartPage=new CartPage(driver);
 		cartPage.isDisplayCartHeadingOrNot();
