@@ -15,7 +15,7 @@ public class CartPage extends BasePage {
 	
 	@FindBy (xpath = "//h1[text()='My Shopping Cart: ']") private WebElement cartHeading;
 	@FindBy (xpath = "//ul[@id='cartData']") private List<WebElement> products;
-	@FindBy (xpath = "//div[@class='cart_info']//h2") private List<WebElement> productsTitles;
+	@FindBy (xpath = "//div[@class='cart_info']//h2//a") private List<WebElement> productsTitles;
 	@FindBy (xpath = "//div[@id='cartItems']//li[@class='head_UPrice']") private List<WebElement> productsPrice;
 	@FindBy (xpath = "//div[@id='cartItems']//li[@class='head_ship']") private List<WebElement> productShippingPrice;
 	@FindBy (xpath = "//div[@id='cartItems']//li[@class='head_Amount']") private List<WebElement> orderPrice;

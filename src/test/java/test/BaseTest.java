@@ -1,5 +1,7 @@
 package test;
 
+import java.util.Set;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -26,6 +28,16 @@ public class BaseTest {
 	@AfterMethod
 	public void exitBrowser() {
 		driver.quit();
+	}
+	
+	public void switchToNewWindow(String parentHandle) {
+	    Set<String> handles = driver.getWindowHandles();
+	    for (String handle : handles) {
+	        if (!handle.equals(parentHandle)) {
+	            driver.switchTo().window(handle);
+	            return;
+	        }
+	    }
 	}
 	
 	

@@ -1,67 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-06T09:49:06 IST" name="Default suite" finished-at="2025-03-06T09:49:21 IST" duration-ms="15545">
+  <suite started-at="2025-03-06T16:41:25 IST" name="Default suite" finished-at="2025-03-06T16:42:52 IST" duration-ms="87245">
     <groups>
     </groups>
-    <test started-at="2025-03-06T09:49:06 IST" name="Default test" finished-at="2025-03-06T09:49:21 IST" duration-ms="15545">
+    <test started-at="2025-03-06T16:41:25 IST" name="Default test" finished-at="2025-03-06T16:42:52 IST" duration-ms="87245">
       <class name="test.CartTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.CartTest@510f3d34]" started-at="2025-03-06T09:49:06 IST" name="launchBrowser" finished-at="2025-03-06T09:49:15 IST" duration-ms="9092" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:41:25 IST" name="launchBrowser" finished-at="2025-03-06T16:41:40 IST" duration-ms="14622" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="clickMultipleProductAddToCartAndVerifyInCart()[pri:0, instance:test.CartTest@510f3d34]" started-at="2025-03-06T09:49:15 IST" name="clickMultipleProductAddToCartAndVerifyInCart" finished-at="2025-03-06T09:49:21 IST" duration-ms="5717" status="FAIL">
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 1 out of bounds for length 1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
-at java.base/java.util.Objects.checkIndex(Objects.java:365)
-at java.base/java.util.ArrayList.get(ArrayList.java:428)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy13.get(Unknown Source)
-at pom.CartPage.getProducTitle(CartPage.java:57)
-at test.CartTest.clickMultipleProductAddToCartAndVerifyInCart(CartTest.java:114)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+        <test-method signature="clickMultipleProductAddToCartAndVerifyInCart()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:41:40 IST" name="clickMultipleProductAddToCartAndVerifyInCart" finished-at="2025-03-06T16:41:44 IST" duration-ms="4310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickMultipleProductAddToCartAndVerifyInCart -->
-        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:test.CartTest@510f3d34]" started-at="2025-03-06T09:49:21 IST" name="exitBrowser" finished-at="2025-03-06T09:49:21 IST" duration-ms="639" status="PASS">
+        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:41:44 IST" name="exitBrowser" finished-at="2025-03-06T16:41:44 IST" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:41:44 IST" name="launchBrowser" finished-at="2025-03-06T16:41:52 IST" duration-ms="7880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="clickSingleProductAddToCartAndVerifyInCart()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:41:52 IST" name="clickSingleProductAddToCartAndVerifyInCart" finished-at="2025-03-06T16:41:56 IST" duration-ms="3737" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSingleProductAddToCartAndVerifyInCart -->
+        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:41:56 IST" name="exitBrowser" finished-at="2025-03-06T16:41:56 IST" duration-ms="351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:41:56 IST" name="launchBrowser" finished-at="2025-03-06T16:41:59 IST" duration-ms="2566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyCalculationCartAmountAndGiftVoucher()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:41:59 IST" name="verifyCalculationCartAmountAndGiftVoucher" finished-at="2025-03-06T16:42:01 IST" duration-ms="2644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCalculationCartAmountAndGiftVoucher -->
+        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:01 IST" name="exitBrowser" finished-at="2025-03-06T16:42:02 IST" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:02 IST" name="launchBrowser" finished-at="2025-03-06T16:42:04 IST" duration-ms="2355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyCalculationOfOrderAmountAfterIncreasingQuantity()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:04 IST" name="verifyCalculationOfOrderAmountAfterIncreasingQuantity" finished-at="2025-03-06T16:42:11 IST" duration-ms="7206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCalculationOfOrderAmountAfterIncreasingQuantity -->
+        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:11 IST" name="exitBrowser" finished-at="2025-03-06T16:42:11 IST" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:11 IST" name="launchBrowser" finished-at="2025-03-06T16:42:14 IST" duration-ms="2266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyCalculationOfUnitPriceAndShippingPriceToOrderAmount()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:14 IST" name="verifyCalculationOfUnitPriceAndShippingPriceToOrderAmount" finished-at="2025-03-06T16:42:16 IST" duration-ms="2473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCalculationOfUnitPriceAndShippingPriceToOrderAmount -->
+        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:16 IST" name="exitBrowser" finished-at="2025-03-06T16:42:16 IST" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:16 IST" name="launchBrowser" finished-at="2025-03-06T16:42:30 IST" duration-ms="13276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyRemoveFromCart()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:30 IST" name="verifyRemoveFromCart" finished-at="2025-03-06T16:42:33 IST" duration-ms="3283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRemoveFromCart -->
+        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:33 IST" name="exitBrowser" finished-at="2025-03-06T16:42:33 IST" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:33 IST" name="launchBrowser" finished-at="2025-03-06T16:42:47 IST" duration-ms="13507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyTotalOrdersAmountToCartAmount()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:47 IST" name="verifyTotalOrdersAmountToCartAmount" finished-at="2025-03-06T16:42:50 IST" duration-ms="3425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTotalOrdersAmountToCartAmount -->
+        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:test.CartTest@8297b3a]" started-at="2025-03-06T16:42:50 IST" name="exitBrowser" finished-at="2025-03-06T16:42:52 IST" duration-ms="1788" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exitBrowser -->
