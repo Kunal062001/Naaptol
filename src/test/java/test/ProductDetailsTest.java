@@ -12,12 +12,13 @@ import pom.CartPage;
 import pom.HomePage;
 import pom.ProductDetailsPage;
 
-
+@Listeners(test.Listeners.class)
 public class ProductDetailsTest extends BaseTest {
 	
 	
 	@Test
 	public void verifyClickableProductFromHomePageToProductDetailsPage() {
+		test=reports.createTest(getClass().getName());
 		HomePage homePage=new HomePage(driver);
 		homePage.enterSearchProduct(driver,"Cooker");
 		homePage.clickOnSearchBtn();
@@ -36,6 +37,7 @@ public class ProductDetailsTest extends BaseTest {
 	
 	@Test
 	public void verifyClickHereToBuyProductFromProductDetailsPageAndCartVisible() {
+		test=reports.createTest(getClass().getName());
 		HomePage homePage=new HomePage(driver);
 		homePage.enterSearchProduct(driver,"Cooker");
 		homePage.clickOnSearchBtn();

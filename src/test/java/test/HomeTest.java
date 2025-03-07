@@ -8,13 +8,14 @@ import org.testng.annotations.Test;
 import pom.CartPage;
 import pom.HomePage;
 import pom.QuickViewPage;
-
+@Listeners(test.Listeners.class)
 public class HomeTest extends BaseTest{
 	
 	
 	
 	@Test
 	public void verifyProductsIsVisibleInShoppingCategories() {
+		test=reports.createTest(getClass().getName());
 		HomePage homePage=new HomePage(driver);
 		homePage.hoverOnShoppingCategories(driver);
 		Assert.assertTrue(homePage.productsIsDisplayedOrNot(0));
@@ -22,6 +23,7 @@ public class HomeTest extends BaseTest{
 
 	@Test
 	public void verifySearchProductToProductInformation() {
+		test=reports.createTest(getClass().getName());
 		HomePage homePage=new HomePage(driver);
 		homePage.enterSearchProduct(driver,"Cooker");
 		homePage.clickOnSearchBtn();
@@ -34,6 +36,7 @@ public class HomeTest extends BaseTest{
 	
 	@Test
 	public void verifyInvalidSearchProductToProductInformation() {
+		test=reports.createTest(getClass().getName());
 		HomePage homePage=new HomePage(driver);
 		homePage.enterSearchProduct(driver, "MacBook");
 		homePage.clickOnSearchBtn();
@@ -42,6 +45,7 @@ public class HomeTest extends BaseTest{
 	
 	@Test
 	public void verifyProductDetailsInQuickView() {
+		test=reports.createTest(getClass().getName());
 		QuickViewPage quickView=new QuickViewPage(driver);
 		HomePage homePage=new HomePage(driver);
 		homePage.enterSearchProduct(driver,"Cooker");
@@ -56,6 +60,7 @@ public class HomeTest extends BaseTest{
 	
 	@Test
 	public void verifyAfterClickCartBtnCartVisibleOrNot() {
+		test=reports.createTest(getClass().getName());
 		HomePage homePage=new HomePage(driver);
 		homePage.clickOnCart();
 		
