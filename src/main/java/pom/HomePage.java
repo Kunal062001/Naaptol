@@ -21,7 +21,8 @@ public class HomePage extends BasePage {
 	@FindBy (xpath = "//span[@class='offer-price']") private List<WebElement> productPrize;
 	@FindBy (xpath = "//span[text()='Quick View']") private WebElement quickView;
 	@FindBy (xpath = "//div[@class='errorMsg']") private WebElement errorMessage;
-	@FindBy (xpath = "//span[@class='cartIcon']") private WebElement cartbtn;
+	@FindBy (xpath = "//span[@class='cartIcon']") private WebElement cartBtn;
+	@FindBy (xpath = "//p[@class='call']//span") private WebElement vendorBtn;
 	
 	
 	public HomePage(WebDriver driver) {
@@ -51,7 +52,7 @@ public class HomePage extends BasePage {
 	}
 	
 	public void clickOnCart() {
-		cartbtn.click();
+		cartBtn.click();
 	}
 	
 	public String getProductTitle(int index) {
@@ -74,5 +75,9 @@ public class HomePage extends BasePage {
 	
 	public void clickOnParticularProduct(int index) {
 		products.get(index).click();
+	}
+	
+	public void clickOnVendorBtn() {
+		vendorBtn.click();
 	}
 }

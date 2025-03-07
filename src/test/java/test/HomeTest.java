@@ -8,10 +8,25 @@ import org.testng.annotations.Test;
 import pom.CartPage;
 import pom.HomePage;
 import pom.QuickViewPage;
+import pom.VendorPage;
 @Listeners(test.Listeners.class)
 public class HomeTest extends BaseTest{
 	
+	@Test
+	public void verifyUrlIsStableOrNot() {
+		test=reports.createTest(reports.getClass().getName());
+		Assert.assertEquals(driver.getCurrentUrl(),"https://www.naaptol.com/");
+	}
 	
+	@Test
+	public void verifyVendorButtonWorkingOrNot() {
+		test=reports.createTest(reports.getClass().getName());
+		HomePage homePage=new HomePage(driver);
+		homePage.clickOnVendorBtn();
+		
+		VendorPage vendorPage=new VendorPage(driver);
+		Assert.assertTrue(vendorPage.headingDisplayed());
+	}
 	
 	@Test
 	public void verifyProductsIsVisibleInShoppingCategories() {
