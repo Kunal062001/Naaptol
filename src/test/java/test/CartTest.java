@@ -2,6 +2,7 @@ package test;
 
 import java.time.Duration;
 import java.util.Iterator;
+import java.util.Scanner;
 import java.util.Set;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -9,7 +10,11 @@ import org.testng.annotations.Test;
 
 import pom.CartPage;
 import pom.HomePage;
+import pom.LoginPage;
+import pom.PaymentOptionsPage;
 import pom.ProductDetailsPage;
+import pom.ShippingAddressPage;
+import pom.ThankYouPage;
 @Listeners(test.Listeners.class)
 public class CartTest extends BaseTest {
 	
@@ -223,6 +228,56 @@ public class CartTest extends BaseTest {
 
 		CartPage cartPage=new CartPage(driver);
 		Assert.assertEquals(cartPage.getTotalAmount(),(cartPage.getCartAmount()+cartPage.getGiftVoucher()));
+	}
+	
+	@Test
+	public void verifyUserCanSuccessfullyPlacedProduct() {
+		test=reports.createTest(getClass().getName());
+		HomePage homePage=new HomePage(driver);
+		homePage.enterSearchProduct(driver, "Cooker");
+		homePage.clickOnSearchBtn();
+		
+		homePage.clickOnParticularProduct(0);
+		Set<String> handles=driver.getWindowHandles();
+		Iterator<String> i= handles.iterator();
+		driver.switchTo().window(i.next());
+		driver.switchTo().window(i.next());
+		
+		ProductDetailsPage detailsPage=new ProductDetailsPage(driver);
+		detailsPage.clickOnclickToBuyBtn(driver);
+		
+		CartPage cartPage=new CartPage(driver);
+		cartPage.clickOnCheckoutBtn();
+		
+		LoginPage loginPage=new LoginPage(driver);
+		loginPage.enterMobileNumber("9111669501");
+		loginPage.clickOnContinueBtn();
+		
+		System.out.print("Enter the Otp to Login.....");
+		Scanner sc=new Scanner(System.in);
+		String otp=sc.next();
+		loginPage.enterOtp(otp);
+		loginPage.clickOnSubmitBtn();
+		
+		ShippingAddressPage addressPage=new ShippingAddressPage(driver);
+		addressPage.selectTitle(driver, "Mr.");
+		addressPage.enterFirstName("Kunal");
+		addressPage.enterLastName("Sarode");
+		addressPage.enterAddress("Pune");
+		addressPage.enterLandmark("Linear Garden");
+		addressPage.enterPincode("411027");
+		addressPage.selectState(driver, "MAHARASHTRA");
+		addressPage.selectCity(driver, "PUNE");
+		addressPage.enterMobileNumber("9111669501");
+		addressPage.clickOnSaveAndProceedBtn();
+		addressPage.clickOnShipOnThisAddress();
+		
+		PaymentOptionsPage optionsPage=new PaymentOptionsPage(driver);
+		optionsPage.clickOnCashOnDelivery();
+		optionsPage.clickOnPlaceOrder();
+		
+		ThankYouPage thankspage=new ThankYouPage(driver);
+		Assert.assertEquals(thankspage.getThanksMessage(), "Your transaction is successful.");
 	}
 		
 

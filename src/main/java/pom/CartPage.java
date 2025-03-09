@@ -25,6 +25,7 @@ public class CartPage extends BasePage {
 	@FindBy (xpath = "//span[@id='totalPayableAmount']") private WebElement total;
 	@FindBy (xpath = "//a[text()='Remove']") private List<WebElement> removeBtn;
 	@FindBy (xpath = "//span[text()='You have No Items in Cart !!! ']") private WebElement emptyMessage;
+	@FindBy (xpath = "//a[@class='red_button2']") private WebElement checkoutBtn;
 	
 	
 	public CartPage(WebDriver driver) {
@@ -84,6 +85,10 @@ public class CartPage extends BasePage {
 	
 	public String getEmptyMessage() {
 		return emptyMessage.getText();
+	}
+	
+	public  void clickOnCheckoutBtn() {
+		checkoutBtn.click();
 	}
 	
 	
